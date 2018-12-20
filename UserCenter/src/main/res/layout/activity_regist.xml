@@ -5,7 +5,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <com.jiwei.baselibrary.widget.HeaderBar
+        app:isShowBack="true"
+        app:titleText="注册"
+        app:rightText="登录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/mUserNname"

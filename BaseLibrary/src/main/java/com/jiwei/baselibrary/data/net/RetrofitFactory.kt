@@ -42,10 +42,9 @@ class RetrofitFactory private constructor() {
 
     private fun initClient(): OkHttpClient {
         val client = OkHttpClient.Builder()
-                .addInterceptor(initLogInterceptor())
                 .connectTimeout(10,TimeUnit.SECONDS)
                 .readTimeout(10,TimeUnit.SECONDS)
-                .hostnameVerifier(HostnameVerifier { s, sslSession ->  true})
+                .hostnameVerifier(HostnameVerifier { _, _ ->  true})
                 .build()
         return client
     }
@@ -60,7 +59,7 @@ class RetrofitFactory private constructor() {
         return retrofit.create(service)
     }
 
-    fun modifyBaseUrl(url: String?):Retrofit{
+    fun modifyBaseUrl(url: String):Retrofit{
         //修改这一点的
         return retrofit.newBuilder().baseUrl(url).build()
     }

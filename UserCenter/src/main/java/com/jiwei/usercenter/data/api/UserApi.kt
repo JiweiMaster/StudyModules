@@ -16,5 +16,5 @@ interface UserApi {
     @GET("/salesorder/salesorder.asmx/AuthUserWithType")
     fun login(@Query("username")username: String,
               @Query("password")password: String,
-              @Query("type")type: String): Observable<ResponseBody>
+              @Query("type")type: String): Observable<LoginRes>
 }

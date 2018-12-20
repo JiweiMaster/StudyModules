@@ -1,5 +1,6 @@
 package com.jiwei.usercenter.service
 
+import com.jiwei.usercenter.data.procotol.LoginRes
 import io.reactivex.Observable
 
 /**
@@ -7,5 +8,5 @@ import io.reactivex.Observable
  */
 
 interface UserSevice{
-    fun register(mobile: String, password: String, vertifyCode: String):Observable<Boolean>
+    fun register(mobile: String, password: String, vertifyCode: String): Observable<LoginRes>
 }
