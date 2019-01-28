@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:layout_margin="6dp"
+        android:background="@drawable/border_corner_all"
         android:id="@+id/mUserNname"
-        android:layout_marginTop="40dp"
         android:hint="输入用户名"
         android:text="18099"
         android:layout_width="match_parent"
@@ -33,6 +34,38 @@
         android:text="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="验证码"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+        <com.jiwei.baselibrary.widget.VertifyButton
+            android:id="@+id/vertifyCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="验证码2" />
+
+        <com.jiwei.baselibrary.widget.TimeButton
+            android:id="@+id/vertifyCodeBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:defaultText="获取验证码"
+            app:timeCount="10" />
+    </LinearLayout>
+
     
     <Button
         android:id="@+id/mRegistBtn"
@@ -48,6 +81,7 @@
         android:layout_height="40dp" />
 
     <TextView
+        android:id="@+id/welcomeText"
         android:gravity="center"
         android:text="欢迎注册"
         android:layout_width="match_parent"

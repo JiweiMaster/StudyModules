@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <!--可以覆盖父主题的部分颜色-->
+        <!--<item name="colorAccent">#d4d4d4</item>-->
+    </style>
+</resources>

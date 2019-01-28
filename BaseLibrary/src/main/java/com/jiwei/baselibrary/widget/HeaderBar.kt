@@ -1,5 +1,6 @@
 package com.jiwei.baselibrary.widget
 
+import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
@@ -38,7 +39,11 @@ class HeaderBar @JvmOverloads constructor(
             mRightTv.text = it
             mRightTv.visibility = View.VISIBLE
         }
-
+//        处理返回事件
+        mLeftIv.setOnClickListener{
+            if(context is Activity){
+                (context as Activity).finish()
+            }
+        }
     }
-
 }

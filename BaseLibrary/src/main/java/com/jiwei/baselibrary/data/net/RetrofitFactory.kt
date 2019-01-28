@@ -1,7 +1,6 @@
 package com.jiwei.baselibrary.data.net
 
-import android.util.TimeUtils
-import com.jiwei.baselibrary.common.BaseContant
+import com.jiwei.baselibrary.common.BaseConstant
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -33,7 +32,7 @@ class RetrofitFactory private constructor() {
         }
 
         retrofit = Retrofit.Builder()
-                .baseUrl(BaseContant.LOGIN_ADDRESS)
+                .baseUrl(BaseConstant.LOGIN_ADDRESS)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(initClient())

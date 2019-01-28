@@ -53,7 +53,6 @@ dependencies {
     //qmui
     api 'com.qmuiteam:qmui:1.1.3'
     api 'com.google.code.gson:gson:2.8.5'
-
     api "com.google.dagger:dagger:$dagger2_version"
     /**
      * kapt是每一个build里面都要添加的

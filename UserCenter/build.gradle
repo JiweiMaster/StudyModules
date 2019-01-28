@@ -1,6 +1,6 @@
-if(isUserModule.toBoolean()){
+if (isUserModule.toBoolean()) {
     apply plugin: 'com.android.library'
-}else{
+} else {
     apply plugin: 'com.android.application'
 }
 apply plugin: 'kotlin-android'
@@ -28,16 +28,16 @@ android {
         }
     }
 
-    sourceSets{
+    sourceSets {
         main {
-            if(isUserModule.toBoolean()){
+            if (isUserModule.toBoolean()) {
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
 //                如果release下面有debug的测试文件夹，需要下面语句
 //                release模式下排除debug文件夹下面的所有jar文件
 //                java {
 //                    exclude '/debug/**'
 //                }
-            }else{
+            } else {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             }
         }

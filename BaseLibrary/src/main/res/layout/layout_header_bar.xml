@@ -3,6 +3,7 @@
                 android:background="@color/common_blue"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/common_header_bar_height">
+
     <ImageView android:id="@+id/mLeftIv"
                android:paddingLeft="@dimen/common_padding"
                android:paddingRight="@dimen/common_padding"

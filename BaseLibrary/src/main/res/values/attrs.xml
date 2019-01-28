@@ -5,4 +5,9 @@
         <attr name="titleText" format="string"/>
         <attr name="rightText" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="TimeButton">
+        <attr name="defaultText" format="string"/>
+        <attr name="timeCount" format="integer"/>
+    </declare-styleable>
 </resources>

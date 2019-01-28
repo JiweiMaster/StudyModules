@@ -27,7 +27,6 @@ class RegisterPresent @Inject constructor(): BasePresent<RegisterView>() {
     lateinit var activity: Activity
 
     fun register(mobile: String, password: String, vertifyCode: String){
-
         mView.showLoading()
         userSevice.register(mobile,password,vertifyCode)
                 .compose(RxLifecycle.bind(activity)
@@ -36,14 +35,16 @@ class RegisterPresent @Inject constructor(): BasePresent<RegisterView>() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-//                    mView.hideLoading()
+                    mView.hideLoading()
                     if(it.islogin){
                         mView.onRegisterResult(true)
                     }else{
                         mView.onRegisterResult(false)
-//                        mView.hideLoading()
+                        mView.onError()
                     }
                 },{
+                    mView.onError()
+                    mView.hideLoading()
                     mView.onRegisterResult(false)
                 })
         //使用自定义的扩展函数封装无用的操作
